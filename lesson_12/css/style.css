@@ -1,0 +1,80 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+section {
+  padding: 60px 0;
+}
+
+.header {
+  font-size: 24px;
+  line-height: 40px;
+  margin-bottom: 70px;
+}
+.header-mini {
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.header strong {
+  font-weight: 900;
+}
+.header span {
+  display: block;
+}
+.form {
+  border: 5px solid #234bc3;
+  padding: 30px 16px 25px;
+}
+.form p {
+  font-size: 23px;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+.form input {
+  margin-bottom: 10px;
+  padding: 15px 5px;
+}
+.form .btn {
+  font-size: 18px;
+  padding: 20px 35px;
+}
+.advantages {
+  margin-bottom: 90px;
+}
+.advantages img {
+  margin-bottom: 20px;
+}
+.our_clients {
+  padding-top: 30px;
+}
+.our_clients .box {
+  height: 215px;
+  margin-bottom: 15px;
+  background-position: center;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+.box_1 {
+  background-image: url(/img/client_1.jpg);
+}
+.box_2 {
+  background-image: url(/img/client_2.jpg);
+}
+.box_3 {
+  background-image: url(/img/client_3.jpg);
+}
+.box_4 {
+  background-image: url(/img/client_4.jpg);
+}
+.box_5 {
+  background-image: url(/img/client_5.jpg);
+}
+.box_6 {
+  background-image: url(/img/client_6.jpg);
+}
+.box_7 {
+  background-image: url(/img/client_7.jpg);
+}
+.box_8 {
+  background-image: url(/img/client_8.jpg);
+}
