@@ -1,4 +1,4 @@
-/* Colors */
+// Colors
 
 @btn-color: #ffb600;
 @icons-color: #ffb600;
@@ -6,6 +6,15 @@
 @bg-light: #f5f5f5;
 @danger: #ff0000;
 @light: #ffffff;
+
+// fonts
+
+@T-bold: 'Proxima Nova B';
+@T-RegularIt: 'Proxima Nova RgIt';
+@T-Semibold: 'Proxima Nova Sb';
+@T-Regular: 'Proxima Nova Rg';
+@T-Light: 'Proxima Nova Lt';
+
 
 // Basic settings
 
@@ -33,11 +42,15 @@ main {
 }
 
 .tel {
+  font-family: @T-bold , sans-serif;
   font-size: 2rem;
   font-weight: 900;
   color: @text-color;
   line-height: 7rem;
   height: 7rem;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .btn-header {
@@ -46,6 +59,7 @@ main {
   background-color: @btn-color;
   border: none;
   border-radius: 5px;
+  font-family: @T-Semibold , sans-serif;
   font-size: 1.2rem;
   text-transform: uppercase;
   color: @light;
