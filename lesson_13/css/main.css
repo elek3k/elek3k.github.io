@@ -1,48 +1,124 @@
 html {
   font-size: 10px;
 }
+body {
+  font-family: 'ProximaNova_Reg', sans-serif;
+  color: #292929;
+}
 section {
   padding: 10rem 0;
 }
-main {
-  padding: 3rem 0;
-}
-.header {
-  height: 7rem;
-}
-.tel-align {
-  text-align: right;
-}
-.tel {
-  font-family: 'Proxima Nova B', sans-serif;
-  font-size: 2rem;
-  font-weight: 900;
-  color: #242424;
-  line-height: 7rem;
-  height: 7rem;
-}
-.tel:hover {
-  text-decoration: none;
-}
-.btn-header {
+.button {
   width: 22.5rem;
-  height: 5rem;
+  padding: 1.6rem;
   background-color: #ffb600;
   border: none;
   border-radius: 5px;
-  font-family: 'Proxima Nova Sb', sans-serif;
+  font-family: 'ProximaNova_Reg', sans-serif;
   font-size: 1.2rem;
   text-transform: uppercase;
   color: #ffffff;
 }
-.table {
+.main {
+  padding: 1.5rem 0 1rem;
+  background: #ffffff url(../img/main-bg.jpg) center center no-repeat;
+  background-size: cover;
+}
+.main-content {
+  padding: 9rem 0 8rem;
+}
+.main .header {
+  height: 7rem;
+}
+.main .header .tel-align {
+  text-align: right;
+}
+.main .header .tel-align .tel {
+  font-family: 'ProximaNova_B', sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+  color: #292929;
+  line-height: 7rem;
+  height: 7rem;
+}
+.main .header .tel-align .tel:hover {
+  text-decoration: none;
+}
+.main .header .table {
   display: table;
   width: 100%;
   height: 7rem;
   margin: 0;
 }
-.table-cell {
+.main .header .table-cell {
   display: table-cell;
   vertical-align: middle;
+  text-align: right;
+}
+.main-title h1 {
+  font-size: 4rem;
+  line-height: 1.45;
+  font-family: 'ProximaNova_B', sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 4.5rem;
+}
+.main-title .subtitle {
+  font-size: 2.4rem;
+  line-height: 1.16;
+  margin-bottom: 6rem;
+}
+.main-title span {
+  display: inline-block;
+  padding: 1.8rem 4rem ;
+  margin-bottom: 3.7rem;
+  font-size: 1.8rem;
   text-align: center;
+  color: #ffffff;
+  background: #00c939;
+}
+.main-title span strong {
+  font-size: 3rem;
+  font-family: 'ProximaNova_B', sans-serif;
+}
+.main-trigger {
+  display: block;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  font-family: 'ProximaNova_B', sans-serif;
+}
+.main-form {
+  padding: 4.3rem 5rem;
+  text-align: center;
+  background-color: #ffffff;
+}
+.main-form-header {
+  font-size: 1.8rem;
+  margin-bottom: 3.5rem;
+}
+.main-form-input {
+  width: 100%;
+  padding: 1.7rem;
+  margin-bottom: 2.5rem;
+  border: 1px solid #dedede;
+  border-radius: 0.5rem;
+}
+.main-form-button {
+  width: 100%;
+  padding: 1.9rem;
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+}
+.main-form small {
+  font-size: 1.2rem;
+  color: #565656;
+}
+.main-form label {
+  position: absolute;
+  display: inline-block;
+  font-size: 1.3rem;
+  padding: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background-color: #ffffff;
+  color: #565656;
 }
