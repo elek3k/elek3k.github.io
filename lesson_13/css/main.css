@@ -1,6 +1,7 @@
 html {
   font-size: 10px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 body {
   font-family: 'ProximaNova_Reg', sans-serif;
@@ -11,7 +12,8 @@ section {
 }
 input:focus,
 button:focus,
-a:focus {
+a:focus,
+textarea {
   outline: none;
 }
 .button {
@@ -20,12 +22,22 @@ a:focus {
   border: none;
   border-radius: 5px;
   font-family: 'ProximaNova_Reg', sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.21rem;
   text-transform: uppercase;
   color: #ffffff;
 }
 .button:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#fbc027), to(#ffaf00));
   background: linear-gradient(to bottom, #fbc027, #ffaf00);
+}
+.section-header {
+  font-family: 'ProximaNova_B', sans-serif;
+  font-size: 3.6rem;
+  margin-bottom: 13rem;
+}
+.section-header_light {
+  margin-bottom: 4.5rem;
+  color: #ffffff;
 }
 .main {
   padding: 1.5rem 0 1rem;
@@ -105,8 +117,10 @@ a:focus {
   margin-bottom: 3.5rem;
 }
 .main-form-input {
+  display: block;
+  font-size: 1.6rem;
   width: 100%;
-  padding: 1.7rem;
+  padding: 1.1rem;
   margin-bottom: 2.5rem;
   border: 1px solid #dedede;
   border-radius: 0.5rem;
@@ -125,20 +139,17 @@ a:focus {
   position: absolute;
   display: inline-block;
   font-size: 1.3rem;
-  padding: 0.5rem;
+  padding: 0.3rem 1rem;
+  margin-bottom: 0;
   left: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
   background-color: #ffffff;
   color: #565656;
 }
 .features {
   text-align: center;
   background-color: #ffffff;
-}
-.features-header {
-  font-family: 'ProximaNova_B', sans-serif;
-  font-size: 3.6rem;
-  margin-bottom: 13rem;
 }
 .features-img {
   height: 6.7rem;
@@ -164,19 +175,150 @@ a:focus {
 .features .prev {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   width: 2rem;
   height: 3rem;
   border: none;
   z-index: 99;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: transparent;
 }
 .features .left {
-  background: url(../img/left-arrow.svg) center no-repeat / cover;
+  background-image: url(../img/left-arrow.svg);
   left: 1rem;
 }
 .features .right {
-  background: url(../img/right-arrow.svg) center no-repeat / cover;
+  background-image: url(../img/right-arrow.svg);
   right: 1rem;
+}
+.prices {
+  background: #00c939 url(../img/prices/prices_bg.png) center;
+}
+.prices-header {
+  text-align: center;
+  margin-bottom: 8rem;
+}
+.prices-header p {
+  font-size: 1.8rem;
+  color: #ffffff;
+}
+.prices-header .button {
+  margin-top: 3.3rem;
+}
+.prices-button {
+  text-align: right;
+}
+.prices .price-block {
+  text-align: center;
+  padding: 5rem 4rem;
+  background-color: #ffffff;
+  -webkit-box-shadow: 7px 12px 21px 0px rgba(0, 0, 0, 0.17);
+          box-shadow: 7px 12px 21px 0px rgba(0, 0, 0, 0.17);
+}
+.prices .price-block_header {
+  margin-bottom: 2.5rem;
+  font-size: 1.8rem;
+  font-family: 'ProximaNova_B', sans-serif;
+}
+.prices .price-block_img {
+  margin-bottom: 2.5rem;
+}
+.prices .price-block_img img {
+  display: inline-block;
+  width: 100%;
+  min-height: 100%;
+}
+.prices .price-block_tag {
+  display: inline-block;
+  font-size: 1.9rem;
+  margin-bottom: 3.3rem;
+  font-family: 'ProximaNova_B', sans-serif;
+}
+.prices .price-block_tag strong {
+  font-size: 3rem;
+}
+.prices .price-block_list {
+  font-size: 1.7rem;
+  line-height: 2.5rem;
+  padding: 0;
+  list-style: none;
+  min-height: 13rem;
+}
+.prices .price-block_list li::before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 1rem;
+  height: 2rem;
+  width: 2rem;
+  background: url(../img/prices/check.svg) no-repeat center;
+  background-size: 100%;
+}
+.prices .price-block_button {
+  padding-left: 5.5rem;
+  padding-right: 5.5rem;
+}
+.popup {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.popup_close {
+  position: absolute;
+  top: -2rem;
+  right: -2.5rem;
+  width: 2rem;
+  font-size: 4rem;
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+}
+.popup_dialog {
+  position: fixed;
+  left: 50%;
+  top: 10%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #ffffff;
+  padding: 3rem 5rem 5rem;
+  text-align: center;
+}
+.popup_form {
+  padding: 0;
+}
+.popup_form .main-form-input {
+  max-width: 260px;
+}
+.popup_form .main-form-button {
+  max-width: 260px;
+  padding-left: 0;
+  padding-right: 0;
+  margin-bottom: 0;
+}
+.popup_form textarea {
+  width: 100%;
+  margin-bottom: 2rem;
+  border: 1px solid #dedede;
+}
+.popup h4 {
+  font-size: 1.8rem;
+  font-family: 'ProximaNova_B', sans-serif;
+}
+.popup p {
+  font-size: 1.8rem;
+  font-family: 'ProximaNova_Reg', sans-serif;
+  line-height: 2rem;
+  padding-bottom: 3rem;
 }
 @media (max-width: 991px) {
   .main {
@@ -211,20 +353,22 @@ a:focus {
   .main .header .table-cell {
     text-align: center;
   }
+  .popup_dialog {
+    padding: 2rem;
+  }
+  .popup_dialog .main-form-button {
+    max-width: 100%;
+  }
 }
 @media (max-width: 543px) {
-  .main-form {
+  .main-content .main-form {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+    padding: 2.5rem;
   }
   .main-title h1 {
     font-size: 3rem;
-  }
-}
-@media (max-width: 543px) {
-  .main-title h1 {
-    font-size: 3.6rem;
     line-height: 3.6rem;
   }
   .main-form {
@@ -235,10 +379,15 @@ a:focus {
     padding-left: 1rem;
     padding-right: 1rem;
   }
-  form {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
+  .features h2 {
+    padding: 0 2rem;
+    margin-bottom: 8rem;
+  }
+  .popup_dialog {
+    width: 70%;
+  }
+  .popup_dialog .main-form-input {
+    max-width: 100%;
   }
 }
 @media (max-width: 457px) {
@@ -248,10 +397,14 @@ a:focus {
   }
   .main-title h1 {
     font-size: 2.8rem;
-    line-height: 2.8rem;
+    line-height: 3.5rem;
   }
   .main-title .subtitle {
     font-size: 1.8rem;
+  }
+  .popup_dialog {
+    padding: 2rem;
+    max-width: 90%;
   }
 }
 @media (max-width: 361px) {
