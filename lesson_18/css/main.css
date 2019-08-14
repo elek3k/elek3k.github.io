@@ -1,3 +1,31 @@
+@-webkit-keyframes shake {
+  from,
+  to {
+    opacity: 0;
+  }
+  25% {
+    color: #c51f03;
+    opacity: 1;
+  }
+  50% {
+    color: yellow;
+    opacity: 1;
+  }
+}
+@keyframes shake {
+  from,
+  to {
+    opacity: 0;
+  }
+  25% {
+    color: #c51f03;
+    opacity: 1;
+  }
+  50% {
+    color: yellow;
+    opacity: 1;
+  }
+}
 body {
   color: #fff;
   padding: 50px 0;
@@ -83,17 +111,24 @@ form {
   margin-left: 20px;
   margin-bottom: 0;
 }
+.form-input .test {
+  -webkit-animation-name: shake;
+          animation-name: shake;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  font-size: 15px;
+  color: #c51f03;
+  margin-bottom: 50px;
+  margin-left: 18px;
+}
 .form-input label {
   font-size: 15px;
   line-height: 20px;
   color: #6f6d6d;
   margin-bottom: 0;
   cursor: pointer;
-}
-.form-input p {
-  font-size: 15px;
-  color: #c51f03;
-  margin-bottom: 50px;
 }
 .form-input .form-btn {
   font-size: 24px;

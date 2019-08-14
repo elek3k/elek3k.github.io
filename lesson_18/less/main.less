@@ -1,3 +1,19 @@
+      // ***** анимация
+@keyframes shake {
+  from, to {
+    opacity: 0;
+  }
+  25%{
+    color: #c51f03;
+    opacity: 1;
+  }
+  50%{
+    color: yellow;
+    opacity: 1;
+  }
+}
+
+
 body {
   color: #fff;
   padding: 50px 0;
@@ -31,7 +47,8 @@ body {
     border-bottom: none;
     padding-left: 25px;
 }
-  .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  .nav-tabs .nav-item.show .nav-link,
+ .nav-tabs .nav-link.active {
     color: #fff;
     font-size: 24px;
     background-color: #03a5da;
@@ -71,6 +88,15 @@ form {
       }
     }
   }
+  .test {
+    animation-name: shake;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    font-size: 15px;
+    color: #c51f03;
+    margin-bottom: 50px;
+    margin-left: 18px;
+  }
   label {
     font-size: 15px;
     line-height: 20px;
@@ -79,9 +105,7 @@ form {
     cursor: pointer;
   }
   p {
-    font-size: 15px;
-    color: #c51f03;
-    margin-bottom: 50px;
+
   }
   .form-btn {
     font-size: 24px;
