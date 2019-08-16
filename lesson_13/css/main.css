@@ -269,13 +269,32 @@ textarea {
   background-size: cover;
 }
 .feedback-slider {
+  position: relative;
   background-color: #ffffff;
   padding: 6rem;
-  -webkit-box-shadow: 6px 10px 18px 0px rgba(0, 0, 0, 0.11), -1px -4px 10px 0px rgba(0, 0, 0, 0.1);
-          box-shadow: 6px 10px 18px 0px rgba(0, 0, 0, 0.11), -1px -4px 10px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 6px 10px 18px 0px rgba(0, 0, 0, 0.11), -1px -2px 10px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 6px 10px 18px 0px rgba(0, 0, 0, 0.11), -1px -2px 10px 0px rgba(0, 0, 0, 0.1);
+}
+.feedback-slider-btn {
+  position: absolute;
+  border: none;
+  padding: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.feedback-slider-btn img {
+  width: 4.5rem;
+  height: 4.5rem;
 }
 .feedback-info p {
   font-size: 1.6rem;
+}
+.feedback-prev-btn {
+  left: 0;
+}
+.feedback-next-btn {
+  right: 0;
 }
 .popup {
   display: none;
