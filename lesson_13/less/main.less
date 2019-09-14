@@ -192,6 +192,7 @@ textarea {
     // Поля ввода текста
     // =======================
     &-input {
+      position: relative;
       display: block;
       font-size: 1.6rem;
       width: 100%;
@@ -218,7 +219,6 @@ textarea {
     // =======================
     label {
       position: absolute;
-      display: inline-block;
       font-size: 1.3rem;
       padding: 0.3rem 1rem;
       margin-bottom: 0;
@@ -226,6 +226,7 @@ textarea {
       transform: translateX(-50%) translateY(-50%);
       background-color: @light;
       color: #565656;
+      z-index: 2;
     }
   }
 }
@@ -379,6 +380,89 @@ textarea {
       font-size: 1.6rem;
     }
   }
+  &-media {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+    &_avatar {
+      height: 5.5rem;
+      width: 5.5rem;
+      margin-right: 2rem;
+      border-radius: 50%;
+      background-repeat: no-repeat;
+      background-color: grey;
+      }
+    .avatar1 {
+      background-image: url(../img/feedback/avatar.jpg);
+      background-size: cover;
+      background-position:-4.7rem center;
+    }
+    &_avatarInfo {
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      span {
+        font-size: 1.4rem;
+      }
+      h5 {
+        font-size: 1.6rem;
+        .bold();
+      }
+    }
+    p {
+      position: relative;
+      margin-top: 3rem;
+      padding: 1.5rem;
+      font-size: 1.5rem;
+      font-style: italic;
+      border: 3px solid @icons-color;
+    }
+    p::before {
+      content: "";
+      position: absolute;
+      top: -2.4rem;
+      left: 5rem;
+      width: 0;
+      height: 0;
+      border: 1.2rem solid;
+      border-color: transparent transparent @icons-color @icons-color;
+    }
+    p::after {
+      content: "";
+      position: absolute;
+      top: -1.5rem;
+      left: 5.4rem;
+      width: 0;
+      height: 0;
+      border: 0.8rem solid;
+      border-color: transparent transparent #fff #fff;
+    }
+  }
+}
+.feedback-form {
+  background-color: transparent;
+  margin-top: 10rem;
+  padding: 0;
+  &_header {
+    font-size: 2.2rem;
+    .bold();
+    margin-bottom: 4rem;
+  }
+  input {
+    width: auto;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .button {
+    width: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 .feedback-prev-btn {
   left: 0;
@@ -405,7 +489,7 @@ textarea {
   &_close {
     position: absolute;
     top: 0;
-    right: -3.5rem;
+    right: 0rem;
     font-size: 4rem;
     line-height: 3rem;
     color: @light;

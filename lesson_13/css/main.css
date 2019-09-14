@@ -118,6 +118,7 @@ textarea {
   margin-bottom: 3.5rem;
 }
 .main-form-input {
+  position: relative;
   display: block;
   font-size: 1.6rem;
   width: 100%;
@@ -138,7 +139,6 @@ textarea {
 }
 .main-form label {
   position: absolute;
-  display: inline-block;
   font-size: 1.3rem;
   padding: 0.3rem 1rem;
   margin-bottom: 0;
@@ -147,6 +147,7 @@ textarea {
           transform: translateX(-50%) translateY(-50%);
   background-color: #ffffff;
   color: #565656;
+  z-index: 2;
 }
 .features {
   text-align: center;
@@ -290,6 +291,96 @@ textarea {
 .feedback-info p {
   font-size: 1.6rem;
 }
+.feedback-media {
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 4rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.feedback-media_avatar {
+  height: 5.5rem;
+  width: 5.5rem;
+  margin-right: 2rem;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-color: grey;
+}
+.feedback-media .avatar1 {
+  background-image: url(../img/feedback/avatar.jpg);
+  background-size: cover;
+  background-position: -4.7rem center;
+}
+.feedback-media_avatarInfo {
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.feedback-media_avatarInfo span {
+  font-size: 1.4rem;
+}
+.feedback-media_avatarInfo h5 {
+  font-size: 1.6rem;
+  font-family: 'ProximaNova_B', sans-serif;
+}
+.feedback-media p {
+  position: relative;
+  margin-top: 3rem;
+  padding: 1.5rem;
+  font-size: 1.5rem;
+  font-style: italic;
+  border: 3px solid #00c939;
+}
+.feedback-media p::before {
+  content: "";
+  position: absolute;
+  top: -2.4rem;
+  left: 5rem;
+  width: 0;
+  height: 0;
+  border: 1.2rem solid;
+  border-color: transparent transparent #00c939 #00c939;
+}
+.feedback-media p::after {
+  content: "";
+  position: absolute;
+  top: -1.5rem;
+  left: 5.4rem;
+  width: 0;
+  height: 0;
+  border: 0.8rem solid;
+  border-color: transparent transparent #fff #fff;
+}
+.feedback-form {
+  background-color: transparent;
+  margin-top: 10rem;
+  padding: 0;
+}
+.feedback-form_header {
+  font-size: 2.2rem;
+  font-family: 'ProximaNova_B', sans-serif;
+  margin-bottom: 4rem;
+}
+.feedback-form input {
+  width: auto;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.feedback-form .button {
+  width: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 .feedback-prev-btn {
   left: 0;
 }
@@ -311,7 +402,7 @@ textarea {
 .popup_close {
   position: absolute;
   top: 0;
-  right: -3.5rem;
+  right: 0rem;
   font-size: 4rem;
   line-height: 3rem;
   color: #ffffff;
