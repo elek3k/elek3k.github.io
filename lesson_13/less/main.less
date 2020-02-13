@@ -35,6 +35,52 @@ body {
   .reg();
   color: @text-color;
 }
+
+
+      // Форма
+      // =======================
+
+.form {
+
+      // Поля ввода текста
+      // =======================
+  &-input {
+    position: relative;
+    display: block;
+    font-size: 1.6rem;
+    width: 100%;
+    padding: 1.1rem;
+    margin-bottom: 2.5rem;
+    border: 1px solid @border-color;
+    border-radius: 0.5rem;
+  }
+
+      // Кнопка формы
+      // =======================
+  &-button {
+    width: 100%;
+    padding: 1.9rem;
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+  }
+      // Подписи к полям
+      // =======================
+  label {
+    position: absolute;
+    font-size: 1.3rem;
+    padding: 0.3rem 1rem;
+    margin-bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: @light;
+    color: #565656;
+    z-index: 2;
+  }
+}
+
+
+
+
     // Typography
     // =======================
 
@@ -188,45 +234,9 @@ textarea {
       font-size: 1.8rem;
       margin-bottom: 3.5rem;
     }
-
-    // Поля ввода текста
-    // =======================
-    &-input {
-      position: relative;
-      display: block;
-      font-size: 1.6rem;
-      width: 100%;
-      padding: 1.1rem;
-      margin-bottom: 2.5rem;
-      border: 1px solid @border-color;
-      border-radius: 0.5rem;
-    }
-
-    // Кнопка формы
-    // =======================
-    &-button {
-      width: 100%;
-      padding: 1.9rem;
-      font-size: 1.6rem;
-      margin-bottom: 1.5rem;
-    }
     small {
       font-size: 1.2rem;
       color: #565656;
-    }
-
-    // Подписи к полям
-    // =======================
-    label {
-      position: absolute;
-      font-size: 1.3rem;
-      padding: 0.3rem 1rem;
-      margin-bottom: 0;
-      left: 50%;
-      transform: translateX(-50%) translateY(-50%);
-      background-color: @light;
-      color: #565656;
-      z-index: 2;
     }
   }
 }
@@ -353,10 +363,8 @@ textarea {
       // feedback
       // ======================
 .feedback {
-  background-image: url(../img/feedback/feedback-bg.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+  background: url(../img/feedback/feedback-bg_hend.png) bottom  left / 25% auto  no-repeat,
+              url(../img/feedback/feedback-bg.jpg) center center / cover no-repeat;
   &-slider {
     position: relative;
     background-color: @light;
@@ -442,34 +450,53 @@ textarea {
       border-color: transparent transparent #fff #fff;
     }
   }
+  &-form {
+    margin-top: 10rem;
+    padding: 0;
+    background-color: transparent;
+    &_header {
+      font-size: 2.2rem;
+      .bold();
+      margin-bottom: 4rem;
+    }
+    .form {
+      display: inline-block;
+      position: relative;
+      min-width: 54.5rem;
+    }
+    input {
+      display: inline;
+      max-width: 25rem;
+      margin-right: 1rem;
+      margin-left: 1rem;
+    }
+    label {
+      padding: 0.3rem;
+    }
+    label:first-of-type {
+      left: 13.7rem;
+    }
+    label:last-of-type {
+      left: 40.7rem;
+      min-width: 11rem;
+    }
+    .button {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 1.8rem 5.5rem;
+      font-size: 1.6rem;
+    }
+  }
+  &-prev-btn {
+    left: 0;
+  }
+  &-next-btn {
+    right: 0;
+  }
 }
-.feedback-form {
-  background-color: transparent;
-  margin-top: 10rem;
-  padding: 0;
-  &_header {
-    font-size: 2.2rem;
-    .bold();
-    margin-bottom: 4rem;
-  }
-  input {
-    width: auto;
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-  .button {
-    width: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-.feedback-prev-btn {
-  left: 0;
-  }
-.feedback-next-btn {
-  right: 0;
-  }
+
+
 
 
 

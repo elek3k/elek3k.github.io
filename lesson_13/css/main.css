@@ -7,6 +7,34 @@ body {
   font-family: 'ProximaNova_Reg', sans-serif;
   color: #292929;
 }
+.form-input {
+  position: relative;
+  display: block;
+  font-size: 1.6rem;
+  width: 100%;
+  padding: 1.1rem;
+  margin-bottom: 2.5rem;
+  border: 1px solid #dedede;
+  border-radius: 0.5rem;
+}
+.form-button {
+  width: 100%;
+  padding: 1.9rem;
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+}
+.form label {
+  position: absolute;
+  font-size: 1.3rem;
+  padding: 0.3rem 1rem;
+  margin-bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  background-color: #ffffff;
+  color: #565656;
+  z-index: 2;
+}
 section {
   padding: 10rem 0;
 }
@@ -117,37 +145,9 @@ textarea {
   font-size: 1.8rem;
   margin-bottom: 3.5rem;
 }
-.main-form-input {
-  position: relative;
-  display: block;
-  font-size: 1.6rem;
-  width: 100%;
-  padding: 1.1rem;
-  margin-bottom: 2.5rem;
-  border: 1px solid #dedede;
-  border-radius: 0.5rem;
-}
-.main-form-button {
-  width: 100%;
-  padding: 1.9rem;
-  font-size: 1.6rem;
-  margin-bottom: 1.5rem;
-}
 .main-form small {
   font-size: 1.2rem;
   color: #565656;
-}
-.main-form label {
-  position: absolute;
-  font-size: 1.3rem;
-  padding: 0.3rem 1rem;
-  margin-bottom: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-          transform: translateX(-50%) translateY(-50%);
-  background-color: #ffffff;
-  color: #565656;
-  z-index: 2;
 }
 .features {
   text-align: center;
@@ -264,10 +264,7 @@ textarea {
   padding-right: 5.5rem;
 }
 .feedback {
-  background-image: url(../img/feedback/feedback-bg.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+  background: url(../img/feedback/feedback-bg_hend.png) bottom left / 25% auto no-repeat, url(../img/feedback/feedback-bg.jpg) center center / cover no-repeat;
 }
 .feedback-slider {
   position: relative;
@@ -361,25 +358,42 @@ textarea {
   border-color: transparent transparent #fff #fff;
 }
 .feedback-form {
-  background-color: transparent;
   margin-top: 10rem;
   padding: 0;
+  background-color: transparent;
 }
 .feedback-form_header {
   font-size: 2.2rem;
   font-family: 'ProximaNova_B', sans-serif;
   margin-bottom: 4rem;
 }
+.feedback-form .form {
+  display: inline-block;
+  position: relative;
+  min-width: 54.5rem;
+}
 .feedback-form input {
-  width: auto;
-  margin-left: 1rem;
+  display: inline;
+  max-width: 25rem;
   margin-right: 1rem;
+  margin-left: 1rem;
+}
+.feedback-form label {
+  padding: 0.3rem;
+}
+.feedback-form label:first-of-type {
+  left: 13.7rem;
+}
+.feedback-form label:last-of-type {
+  left: 40.7rem;
+  min-width: 11rem;
 }
 .feedback-form .button {
-  width: auto;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  padding: 1.8rem 5.5rem;
+  font-size: 1.6rem;
 }
 .feedback-prev-btn {
   left: 0;
